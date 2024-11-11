@@ -12,3 +12,131 @@ Attribute selectors (select elements based on an attribute or attribute value)
 
 /************************************/
 /* Simple Selectors */
+
+/* Element Selector */
+h1 {
+    text-align: center;
+}
+
+/* Class Selector */
+.center {
+    text-align: center;
+}
+
+/* ID Selector */
+#heading1 {
+    text-align: center;
+}
+
+/*****************************/
+
+.large {
+    font-size: 20px;
+}
+
+/* Only choose p elements with center class.*/
+p.center {
+    color: blue;
+}
+
+/*****************************/
+
+/* Descendant Selector */
+
+/* .wrapper p {
+    color: red;
+} */
+
+/* body div p {
+    color: red;
+} */
+
+/* Bunu kullanmamaya çalış. HTML yapısını CSS içerisine karıştırıyor.
+Ayrıca Selektörün spesifisitesini(öncelik) arttırıyor. Class kullan.*/
+
+/****************************************/
+/* Resolving Conflicting Declarations */
+
+p {
+    font-size: 22px;
+}
+
+.author {
+    font-size: 18px;
+}
+
+.author2 {
+    font-size: 50px;
+}
+
+#author-text {
+    font-size: 20px;
+}
+
+/****************************************/
+/* Alıştırmalar */
+
+/* Universal Selector(*) tüm elementleri seçer.
+Bazı elementlerin sahip olduğu default(varsayılan)
+boşlukları kaldırdık. Örneğin <p> elementi
+etrafındaki margin gibi. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.rect {
+    width: 250px;
+    height: 250px;
+    background-color: #EB4444;
+    border: 5px solid #000;
+    border-radius: 24px;
+}
+
+.rect-text {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    /* line-height: 250px; */
+    margin-top: 110px;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: linear-gradient(129.693deg, #AEC4FD 0%, #5985F5 54%, #205CF3 100%);
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.05), 20px 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.magic {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, rgba(255, 38, 0, 0.2) 0%, rgb(0, 255, 17, 0.2) 50%, rgb(55, 0, 255, 0.2) 100%);
+    box-shadow: 0 217px 61px 0 rgba(255, 0, 128, 0),
+    0 139px 56px 0 rgba(255, 0, 128, 0.01),
+    0 78px 47px 0 rgba(255, 0, 128, 0.05),
+    0 35px 35px 0 rgba(255, 0, 128, 0.09),
+    0 9px 19px 0 rgba(255, 0, 128, 0.1);
+    
+    /* Margin Collapsing Sorunu Çözümü: */
+    overflow: hidden;
+}
+
+.magic-text {
+    width: 100px;
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+    /* Yatay ve Dikeyde hizaladık */
+    /* margin: top right bottom left */
+    margin: 88px auto 0 auto;
+}
