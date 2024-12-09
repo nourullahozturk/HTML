@@ -8,11 +8,19 @@
     <title>Flexbox</title>
 
     <style>
-        .el {
-            /*
-            flex-grow: 1;
-            */
-        }
+      .el {
+        /*
+        DEFAULTS
+        flex-grow: 0
+        flex-shrink: 1
+        flex-basis: auto
+        */
+
+        /*
+        Shorthand
+        flex: 0 1 auto;
+        */
+      }
 
       .el--1 {
         background-color: blueviolet;
@@ -55,9 +63,11 @@
         margin: 40px;
 
         display: flex;
-        justify-content: center; /* YATAY */
-        align-items: center; /* DİKEY */
-        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        /* flex-direction: column; */
       }
     </style>
   </head>
@@ -76,9 +86,9 @@
 
       <div class="el el--6">languages</div>
 
-      <div class="el el--7">to</div>
+      <!-- <div class="el el--7">to</div>
 
-      <div class="el el--8">learn</div>
+      <div class="el el--8">learn</div> -->
     </div>
   </body>
 </html>
